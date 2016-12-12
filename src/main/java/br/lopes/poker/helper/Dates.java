@@ -15,12 +15,12 @@ public class Dates {
         return Date.from(instant);
     }
 
-    public static Date localDateToDate(LocalDate date) {
+    public static Date localDateToDate(final LocalDate date) {
         final Instant instant = date.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
         return Date.from(instant);
     }
 
-    public static LocalDate dateToLocalDate(Date date) {
+    public static LocalDate dateToLocalDate(final Date date) {
         return Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()).toLocalDate();
     }
 
